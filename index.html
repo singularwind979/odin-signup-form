@@ -28,32 +28,54 @@
 </head>
 
 <body>
-  <!-- Header: site identity and primary navigation -->
-  <header>
-    <nav>
-      <ul class="nav">
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <aside>
+    <img src="assets/imgs/bg.jpg">
+    <div class="icon-logo">The Odin Project</div>
+  </aside>
 
-  <!-- Main: the page's primary content landmark -->
   <main>
-    <!-- Intro: the single <h1> for the page lives here -->
-    <section>
-      <h1>Your page heading here!</h1>
-    </section>
-
-    <!-- A themed block. -->
-    <section>
-      <h2>Section title</h2>
-      <p>Replace with your content.</p>
-    </section>
+    <h1 class="title">Get Started</h1>
+    <form id="sign-up" action="/" method="post">
+      <fieldset id="names">
+        <legend class="field">NAME</legend>
+        <div class="set">
+          <label class="icon-user" for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" autocomplete="given-name" required>
+        </div>
+        <div class="set">
+          <label class="icon-users" for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" autocomplete="family-name" required>
+        </div>
+      </fieldset>
+      <fieldset id="contacts">
+        <legend class="field">CONTACT</legend>
+        <div class="set">
+          <label class="icon-mail" for="email">Email Address</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="set">
+          <label class="icon-phone" for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+        </div>
+      </fieldset>
+      <fieldset id="passwords">
+        <legend class="field">PASSWORD</legend>
+        <div class="set">
+          <label class="icon-lock-open" for="pwd">Password</label>
+          <input type="password" id="pwd" name="pwd" minlength="8" autocomplete="new-password" required>
+        </div>
+        <div class="set">
+          <label class="icon-lock-close" for="confirm-pwd">Confirm Password</label>
+          <input type="password" id="confirm-pwd" name="confirm-pwd" minlength="8" autocomplete="new-password" required>
+        </div>
+      </fieldset>
+      <div class="actions">
+        <button type="submit" id="submit-btn" class="icon-submit">Create Account</button>
+        <button type="reset" id="reset-btn" class="icon-reset">Clear Information</button>
+      </div>
+    </form>
   </main>
 
-  <!-- Footer: site-level information -->
   <footer>
     <p>&copy; <time datetime="2026">2026</time> Singularwind</p>
   </footer>
